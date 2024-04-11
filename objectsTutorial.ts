@@ -34,4 +34,40 @@ function displayTodoList() {
 createTodo("Watch movie at 7");
 
 // Display the todo list
+// displayTodoList();
+
+
+// // Function to delete a todo item by ID
+// function deleteTodo(id: number): void {
+//   // Find the index of the todo item with the given ID in the todoList array
+//   const index = todoList.findIndex(todo => todo.id === id);
+
+//   // If the todo item with the given ID is found
+//   if (index !== -1) {
+//     // Remove the todo item from the todoList array using splice
+//     todoList.splice(index, 1);
+//     console.log(`Todo item with ID ${id} has been deleted.`);
+//   } else {
+//     console.log(`Todo item with ID ${id} not found.`);
+//   }
+// }
+
+// Function to delete a todo item by ID
+function deleteTodo(id: number): void {
+  // Find the index of the todo item with the given ID in the todoList array
+  const index = todoList.findIndex(todo => todo.id === id);
+
+  // If the todo item with the given ID is found, remove it from the todoList array
+  if (index !== -1) {
+    todoList.splice(index, 1);
+  }
+}
+
+// Example usage: Delete the todo item with ID 1
+deleteTodo(1);
+
+
+
+// Display the updated todo list
 displayTodoList();
+
