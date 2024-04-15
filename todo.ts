@@ -18,7 +18,7 @@ function fetchData(): Promise<MyTodo> {
       } else {
         reject("Todo not completed");
       }
-    }, 5000);
+    }, 5000); 
   });
 }
 
@@ -28,6 +28,4 @@ fetchData()
   })
   .catch((error) => {
     console.error(error);
-  })
-
-  https://jsonplaceholder.typicode.com/posts/1
+  });
