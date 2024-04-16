@@ -1,3 +1,4 @@
+
 function fetchData(): Promise<string> {
     return new Promise((resolve, reject) => {
         setTimeout(() => {

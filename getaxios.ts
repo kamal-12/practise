@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
 interface MyTodo {
   id: number;
@@ -7,10 +7,11 @@ interface MyTodo {
 }
 
 function fetchData(): Promise<MyTodo> {
-  return axios.get<MyTodo>('https://jsonplaceholder.typicode.com/posts/1')
-    .then (response => {
-        return response.data;
-  });
+  return axios
+    .get<MyTodo>("https://jsonplaceholder.typicode.com/posts/1")
+    .then((response) => {
+      return response.data;
+    });
 }
 
 fetchData()

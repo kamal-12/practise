@@ -1,22 +1,22 @@
-import axios from 'axios';
+import axios from "axios";
+import { error } from "console";
 
-interface MyTodo {
+interface Post {
   id: number;
   title: string;
   body: string;
 }
 
-function fetchData(): Promise<MyTodo> {
-  return axios.get<MyTodo>('https://jsonplaceholder.typicode.com/posts/1')
-    .then(response => {
-      return response.data;
-    });
+function fetchData() {
+  const response = axios.get<Post>(
+    "https://jsonplaceholder.typicode.com/posts/1"
+  );
+  response.then((postRes) => {
+    console.log(postRes.data);
+  });
+  response.catch((error) => {
+    console.log(error);
+  });
 }
 
-fetchData()
-  .then((data: MyTodo) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+fetchData();
